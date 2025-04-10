@@ -16,7 +16,7 @@ def load_data():
     """
     try:
         patients = pd.read_csv(PATIENTS_FILE)
-        chartevents = pd.read_csv(CHARTEVENTS_FILE)
+        chartevents = pd.read_csv(CHARTEVENTS_FILE, low_memory=False)
         d_items = pd.read_csv(D_ITEMS_FILE)
         print("数据加载成功！")
         return patients, chartevents, d_items
